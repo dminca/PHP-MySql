@@ -9,5 +9,6 @@ if ($t) {
 	$_SESSION['nume'] = 'ion'; $_SESSION['varsta'] = 30;
 }
 
-echo "<a href=\"view_session.php\">Vezi date sesiune</a>";
+echo "<a href=\"view_session.php\">Vezi date sesiune</a><br/>
+<a href=\"delete_session.php\">Sterge sesiune</a>";
 ?>
