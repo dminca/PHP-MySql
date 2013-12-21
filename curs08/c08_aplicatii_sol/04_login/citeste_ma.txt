@@ -1,0 +1,10 @@
+Se creeaza intai baza de date mylogin si apoi se ruleaza mylogin.sql.
+
+
+
+Se testeaza cu:
+
+username: horatiu
+parola: intra
+
+

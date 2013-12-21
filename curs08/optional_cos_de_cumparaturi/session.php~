@@ -1,0 +1,6 @@
+<?php ini_set('session.use_only_cookies', 1);// se vor folosi numai cookie-uri pt transmiterea id-ului de sesiune
+
+$zi=60*60*24;//nr secunde dintr-o zi
+session_start();
+setcookie(session_name(), session_id(), time() + 30*$zi, "/");  // prelungeste viata cookie-ului de la ultimul click 
+?>
