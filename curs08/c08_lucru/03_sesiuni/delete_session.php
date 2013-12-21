@@ -12,4 +12,6 @@ if(isset($_SESSION)){
 	session_destroy();
 }
 
+echo "<a href=\"view_session.php\">Vezi sesiune</a>";
+
 ?>
