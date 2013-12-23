@@ -1,5 +1,6 @@
 PHP-MySql
 =========
+[![Build Status](https://travis-ci.org/testing-area/PHP-MySql.png)](https://travis-ci.org/testing-area/PHP-MySql)
 
 <h3 style="color: red;">** COMENZI GIT (instructiuni de utilizare) **</h3>
 
