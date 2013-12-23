@@ -10,7 +10,6 @@ before_script:
   - git clone git://github.com/zenovich/runkit.git && cd runkit && phpize && ./configure && make && make install && cd ..
   - phpenv config-add test/travis.php.ini
   - curl -s http://getcomposer.org/installer | php
-  - php composer.phar install --dev --no-interaction
 script:
   - ./scripts/generate-mo --quiet
   - ant phpunit lint
