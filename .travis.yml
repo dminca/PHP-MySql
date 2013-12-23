@@ -1,17 +1,12 @@
 language: php
+
 php:
-  - "5.5"
-  - "5.4"
-  - "5.3"
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq ant
+    - 5.3
+    - 5.4
+    - 5.5
+    - hhvm
+
 before_script:
-  - git clone git://github.com/zenovich/runkit.git && cd runkit && phpize && ./configure && make && make install && cd ..
-  - phpenv config-add test/travis.php.ini
-script:
-  - ./scripts/generate-mo --quiet
-  - ant phpunit lint
-  - if [[ $TRAVIS_PULL_REQUEST != "false" ]] ; then ./scripts/check-dco origin/$TRAVIS_BRANCH..FETCH_HEAD ; fi
-after_script:
-  - php vendor/bin/coveralls -v
+    - "composer install"
+
+script: ./vendor/bin/phpunit
