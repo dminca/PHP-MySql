@@ -3,3 +3,15 @@ php:
   - "5.5"
   - "5.4"
   - "5.3"
+  
+install:
+  - ./bin/ci/install_dependencies.sh
+  - php vendor/vendors.php
+
+env:
+  - SYMFONY_VERSION="2.0.*" DB=mysql
+  - SYMFONY_VERSION="dev-master" DB=mysql
+  
+pyrus install http://phptal.org/latest.tar.gz
+pear install pear/PHP_CodeSniffer
+phpenv rehash
