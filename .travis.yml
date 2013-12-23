@@ -3,13 +3,17 @@ php:
   - "5.5"
   - "5.4"
   - "5.3"
-  
-install:
-  - ./bin/ci/install_dependencies.sh
-  - php vendor/vendors.php
-
-env:
-  - SYMFONY_VERSION="2.0.*" DB=mysql
-  - SYMFONY_VERSION="dev-master" DB=mysql
-  
-phpenv rehash
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq ant
+before_script:
+  - git clone git://github.com/zenovich/runkit.git && cd runkit && phpize && ./configure && make && make install && cd ..
+  - phpenv config-add test/travis.php.ini
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install --dev --no-interaction
+script:
+  - ./scripts/generate-mo --quiet
+  - ant phpunit lint
+  - if [[ $TRAVIS_PULL_REQUEST != "false" ]] ; then ./scripts/check-dco origin/$TRAVIS_BRANCH..FETCH_HEAD ; fi
+after_script:
+  - php vendor/bin/coveralls -v
