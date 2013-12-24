@@ -1,6 +1,6 @@
 PHP-MySql
 =========
-[![Build Status](https://travis-ci.org/testing-area/PHP-MySql.png)](https://travis-ci.org/testing-area/PHP-MySql)
+[![Build Status](https://travis-ci.org/completit/PHP-MySql.png?branch=beta)](https://travis-ci.org/completit/PHP-MySql)
 
 <h3 style="color: red;">** COMENZI GIT (instructiuni de utilizare) **</h3>
 
