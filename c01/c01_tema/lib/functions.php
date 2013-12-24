@@ -3,15 +3,15 @@
 # $rows = rows
 # $nr = number of pictures in the folder
 
-function tabel_imagini($cols, $rows, $nr){
+function tabel_imagini($cols){
 echo "<table border='1'>"; // open Table
  
-for($tr=1;$tr<=$rows;$tr++){      
+for($tr=1;$tr<= 1;$tr++){      
      echo "<tr>"; // deschid TR
 
         for($td=1;$td<=$cols;$td++){ // deschid TD
         	echo "<td>";
-        	for ($i=1; $i <= $nr; $i++) { 
+        	for ($i=1; $i <= $cols; $i++) { 
         		echo "<img src=\"img/browser$i.jpg\" alt=\"poza[$i]\">";
         	}
         }
