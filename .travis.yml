@@ -1,11 +1,5 @@
 # see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-language: node_js
-node_js:
-  - "0.11"
-  - "0.10"
-  - "0.8"
-  - "0.6"
 
 # list any PHP version you want to test against
 php:
