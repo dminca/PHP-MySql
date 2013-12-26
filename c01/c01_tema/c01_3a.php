@@ -1,9 +1,7 @@
 <?php
-# $cols = columns
-# $rows = rows
-# $nr = number of pictures in the folder
+$cols = 5;
+$go = 1;
 
-function tabel_imagini($cols){
 echo "<table border='1'>"; // open Table
  
 for($tr=1;$tr<= 1;$tr++){      
@@ -12,7 +10,7 @@ for($tr=1;$tr<= 1;$tr++){
         for($td=1;$td<=$cols;$td++){ // deschid TD
         	echo "<td>";
         	for ($i=1; $i <= $cols; $i++) { 
-        		echo "<img src=\"img/browser$i.jpg\" alt=\"poza[$i]\">";
+        		echo ($go++)."x";
         	}
         	echo "</td>";
         }
@@ -21,11 +19,5 @@ for($tr=1;$tr<= 1;$tr++){
  
 echo "</table>";  // inchid table & bye!
 #end code
-}
-
-/*
-====APELUL FUNCTIEI
-tabel(2, 10);
-*/
 
 ?>
