@@ -14,7 +14,7 @@ for($tr=1;$tr<= 2;$tr++){ // generate 2 rows
 			
 			// in td I'm doing the operation
         	for ($i=1; $i <= $box; $i++) { 
-        		echo $go."x"."$i"."=" . ($go*$i) . "<br/>"; // the core: Operation calculates here 
+        		echo $go."x".$i."=" . ($go*$i) . "<br/>"; // the core: Operation calculates here 
         	}
         	echo "</td>";
         }
