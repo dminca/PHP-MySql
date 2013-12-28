@@ -14,6 +14,7 @@ for($tr=1;$tr<= 1;$tr++){
         	for ($i=1; $i <= $cols; $i++) { 
         		echo "<img src=\"img/browser$i.jpg\" alt=\"poza[$i]\">";
         	}
+        	echo "</td>";
         }
     echo "</tr>"; // inchid TR
 }
