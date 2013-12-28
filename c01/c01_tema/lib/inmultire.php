@@ -1,5 +1,6 @@
 <?php
-function inmultire($cells, $columns){
+function inmultire($cells, $columns)
+{
     $go = 0;
 
     echo "<table border='1'>"; // open Table
@@ -23,9 +24,4 @@ function inmultire($cells, $columns){
     echo "</table>"; // closing <table> and BYE!
 }
 #end code
-
-
-
-
-
 ?>
