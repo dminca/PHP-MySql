@@ -73,11 +73,11 @@ function tabel($cells, $columns)
 /*
 ------------------------------------------------
 ----------------[ C.M.M.D.C.]-------------------
-------------------------------------------------
+-------------------[+TABEL]---------------------
 */
 function cmmdc($a, $b)
 {
-    while ($a != $b)
+    while ($a != $b) // TODO: include the table2 function in this function in order to work properly
     {
         if ($a > $b)
         {
@@ -87,7 +87,7 @@ function cmmdc($a, $b)
             $b -= $a;
         }
     }
-    echo $a; // this is the cmmdc output
+    echo $a; // this is the cmmdc output // BUG: will output the $a var at the beggining of each line no matter where it's placed...
 }
 
 ?>
