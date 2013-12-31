@@ -53,7 +53,7 @@ echo '</form>';
 
 if(isset($_GET['btnSubmit'])) {
 	if(checkdate($_GET['luna'], $_GET['zi'], $_GET['an'])){
-		echo $zile[$_GET['zi']-1]." ".$luni[$_GET['luna']-1]." ".$ani[$_GET['an']-1];
+		echo "<p>Data nasterii este: ".$zile[$_GET['zi']-1]." ".$luni[$_GET['luna']-1]." ".$ani[$_GET['an']-1]."</p>";
 		}else{
 			echo 'Data nu este valida!';			
 		}
