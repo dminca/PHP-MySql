@@ -5,11 +5,13 @@
  */
 
 $zile=range(1,31);
-//$luni=array("Ianuarie", "Februarie", "Martie", "Aprilie", "Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+$luni=array("Ianuarie", "Februarie", "Martie", "Aprilie", "Mai","Iunie","Iulie","August","Septembrie","Octombrie","Noiembrie","Decembrie");
+/*
 $luni=array();
 for($i=1;$i<=12;$i++){
 	$luni[]=date('F',mktime(0,0,0,$i));
 	}
+*/
 $an_curent=date('Y');
 $start_year=1980;
 $ani=range($start_year,$an_curent);
@@ -25,8 +27,8 @@ function select($name,$array){
 		echo '<option value="'.$nr_crt.'">'.$value.'</option>';
 		}
 	//end select
-	echo "</select>";	
-	}
+	echo "</select>";
+}
 
 
 //start form
@@ -48,27 +50,14 @@ echo '</form>';
 
 //preiau date din formular
 //print_r($_GET);
-$ziua = @ $zile[$_GET['zi']-1];
-$luna = @ $luni[$_GET['luna']-1];
-$anul = @ $ani[$_GET['an']-1];
 
-/*
-$birthday = array($ziua, $luna, $anul);
-echo $zile[$_GET['zi']-1].' '.$luni[$_GET['luna']-1].' '.$ani[$_GET['an']-1];
-*/
 if(isset($_GET['btnSubmit'])) {
-	//echo $zile[$_GET['zi']-1];
 	if(checkdate($_GET['luna'], $_GET['zi'], $_GET['an'])){
-		$birthday = array($ziua, $luna, $anul);
-		print_r($birthday[0]);
-		echo " ";
-		print_r($birthday[1]);
-		echo " ";
-		print_r($birthday[2]);
+		echo $zile[$_GET['zi']-1]." ".$luni[$_GET['luna']-1]." ".$ani[$_GET['an']-1];
 		}else{
 			echo 'Data nu este valida!';			
-			}
+		}
 	
-	}
+}
 
 ?>

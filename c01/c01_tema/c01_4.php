@@ -7,7 +7,7 @@
 include ('lib/zodia.php');
 include ('lib/data.php');
 
+$luna = $_GET['luna'];
 
-
-
+zodie($luna);
 ?>
