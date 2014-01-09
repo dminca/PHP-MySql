@@ -1,5 +1,5 @@
 <?php
-$trueColors = array(
+$colors = array(
 'ANTIQUE WHITE' => '#FAEBD7',
 'AQUA' => '#00FFFF',
 'AQUAMARINE' => '#7FFFD4',
@@ -136,4 +136,31 @@ $trueColors = array(
 'WHITE SMOKE' => '#F5F5F5',
 'YELLOW' => '#FFFF00',
 'YELLOW GREEN' => '#9ACD32');
+
+/**
+ * color functions
+	==== WARNING! ====
+ The following functions only generate <option values>...
+ * @return void
+ * @author 
+ **/
+
+//print_r($colors); #debug
+function colorBg($array){
+	// pass trough array
+    foreach ($array as $key => $value) {
+        echo "<option value=\"$key\">$key</option>"; 
+    }
+}
+
+function colorTxt($array){        
+        // pass trough array
+    foreach ($array as $key => $value) {
+        echo "<option value=\"$key\">$key</option>"; 
+    }
+}
+
+# debug 
+//colorBg($colors,'bg');
+//colorTxt($colors,'text');
 ?>

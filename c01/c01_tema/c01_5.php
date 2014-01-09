@@ -6,36 +6,30 @@
  */
 
 include('lib/culori.php');
-
-//print_r($trueColors); # debug
-
-echo "Tabloul afisat cu foreach: ";
-	echo "<br />";		
-	foreach($trueColors as $cheie=>$valoare){
-		echo "$cheie: $valoare";
-		echo "<br />";
-	}
-    
-// afisez culorile in lista de selectie
-$bgSelect = "<select>
-                <label>BG Colors: </label>";
-// code here
-    
-
-$bgSelect.="</select>";
-#end
-
-
-$txtSelect="<select>
-                <label>Txt Colors: </label>";
-// code here
-    
-
-$txtSelect.="</select>";
-#end
+//print_r($colors); # debug
 ?>
-<!-- Decoy text: -->
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>C01 - ex5 [ coloured text ]</title>
+ </head>
+ <body>
+  <form method = "get" action="">
+  	<label>Select background:</label><select name="bg">
+  	<!-- generate dropdown via color Function -->
+  		<?php
+  		colorBg($colors);  		
+  		?>
+  	</select>
 
-<span style="background-color: ; color: ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+  	<label>Select text color:</label><select name="txt[]">
+  	<!-- generate dropdown via color Function -->
+  		<?php
+  		colorTxt($colors);  		
+  		?>
+  </select>
 
-<input type="submit" name="btn" value="Change colors"/>
+  <input type="submit" name="btn" value="Colorize!"/>
+  </form>
+ </body>
+</html>
