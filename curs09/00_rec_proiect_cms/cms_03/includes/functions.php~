@@ -1,0 +1,14 @@
+<?php
+	function confirm_query($result_set){
+		if(!$result_set){
+			die("Interogarea bazei de date nu a reusit!");
+			}
+		}
+	function select_all_subjects(){
+		$query="SELECT *
+				FROM subjects
+				ORDER BY position ASC";
+		$subject_set=mysqli_query($connection,$query);
+		return $subject_set;
+		}
+?>

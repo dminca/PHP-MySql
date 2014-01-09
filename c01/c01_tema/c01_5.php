@@ -16,14 +16,14 @@ include('lib/culori.php');
  <body>
   <form method = "get" action="">
   	<label>Select background:</label><select name="bg">
-  	<!-- generate dropdown via colorFunction -->
+  	<!-- generate dropdown via color Function -->
   		<?php
   		colorBg($colors);  		
   		?>
   	</select>
 
   	<label>Select text color:</label><select name="txt[]">
-  	<!-- generate dropdown via colorFunction -->
+  	<!-- generate dropdown via color Function -->
   		<?php
   		colorTxt($colors);  		
   		?>

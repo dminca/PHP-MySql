@@ -1,0 +1,20 @@
+<?php
+$filename='emails.csv';
+
+$fp=fopen($filename,'r' );//deschid fisierul pentru scriere; daca nu exista, va fi creat 
+//var_dump($fp);
+if(!$fp){
+	die("Fisierul nu poate fi deschis");
+	}
+	
+while($line=fgetcsv($fp,',')){
+	//print_r($line);
+	echo "Prenume: $linie[0]"	
+	echo "Nume: $line[1]";
+	echo "<br />";
+	echo "Email: $line[2]";
+	echo "<br /><br />"; 
+	}
+
+fclose($fp);
+?>
