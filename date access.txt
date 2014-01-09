@@ -1,3 +1,0 @@
-server:top-technology.ro
-user:ftpuser@ftp.top-technology.ro
-pass:ftppass
